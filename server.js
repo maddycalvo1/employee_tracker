@@ -1,6 +1,6 @@
 // Server.js is missing something as it is not working
 
-const { Server } = require("http");
+let { Server } = require("http");
 let mysql = require("mysql");
 
 let [ VIEW_ALL_EMPLOYEES,
