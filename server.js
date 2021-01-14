@@ -1,7 +1,7 @@
 // Server.js is missing something as it is not working
 
 let { Server } = require("http");
-let mysql = require("mysql");
+let mysql = require("mysql2");
 
 let [ VIEW_ALL_EMPLOYEES,
     VIEW_ALL_ROLE,
@@ -9,7 +9,7 @@ let [ VIEW_ALL_EMPLOYEES,
     ADD_DEPARTMENT,
     ADD_EMPLOYEE,
     ADD_ROLE,
-    UPDATE_EMPLOYEE_INFO] = require('./lib/const');
+    UPDATE_EMPLOYEE_INFO] = require('.schema.sql');
 
 let  {
     viewAllEmployees,
@@ -20,7 +20,7 @@ let  {
     addRole,
     updateRole,
     updateManager
-    } = require('./lib/queries');
+    } = require('./schema.sql');
 
 
 var connection = mysql.createConnection({
